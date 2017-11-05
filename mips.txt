@@ -1,0 +1,15 @@
+# you can do comments like this
+add $r1, $r2, $r3
+sub $r2, $r4, $r5
+and $r2, $r7 $r2
+sw $r1, 3($r4)
+lw $r6, 29($r1)
+
+# also can skip lines
+addi $rstatus, $r2, 44
+nop
+nop
+blt $r10, $r11, 12
+setx 100
+jr $ra
+j 150
