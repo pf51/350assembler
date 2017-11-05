@@ -2,6 +2,10 @@ import java.util.*;
 import java.util.Scanner;
 import java.io.*;
 
+/**
+* Simple parser that converts MIPS code into machine code using the ISA provided in instruction_codes.txt
+* @author pf51
+**/
 public class Assembulator {
 
 	private Map<String, String[]> instructions;
