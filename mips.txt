@@ -1,15 +1,15 @@
 # you can do comments like this
-add $r1, $r2, $r3
-sub $r2, $r4, $r5
-and $r2, $r7 $r2
-sw $r1, 3($r4)
-lw $r6, 29($r1)
 
-# also can skip lines
-addi $rstatus, $r2, 44
-nop
-nop
-blt $r10, $r11, 12
-setx 100
-jr $ra
-j 150
+addi $r1, $r0, 10
+addi $r2, $r0, 25
+
+# store 25 at address 10+3 = 13
+sw   $r2, 3($r1)
+
+# load address 13, should put 25 in $r9
+addi $r4, $r0, 11
+sub  $r7, $r2, $r4
+lw   $r9, -1($r7)
+
+# $r10 = 35
+add $r10, $r9, $r1
