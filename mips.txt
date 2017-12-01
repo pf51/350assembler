@@ -1,15 +1,26 @@
-# you can do comments like this
+# instructions to test jumps
 
-addi $r1, $r0, 10
-addi $r2, $r0, 25
-
-# store 25 at address 10+3 = 13
-sw   $r2, 3($r1)
-
-# load address 13, should put 25 in $r9
-addi $r4, $r0, 11
-sub  $r7, $r2, $r4
-lw   $r9, -1($r7)
-
-# $r10 = 35
-add $r10, $r9, $r1
+addi $r1, $r0, 12
+addi $r2, $r0, 9
+addi $r3, $r0, -40
+addi $r4, $r0, 23
+addi $r5, $r0, 9
+addi $r6, $r0, 69
+j 10
+addi $r7, $r0, -3
+addi $r8, $r0, -89
+addi $r9, $r0, -99
+addi $r10, $r0, 110
+addi $r11, $r0, 11
+addi $r12, $r0, 122
+jal 17
+addi $r13, $r0, 13
+addi $r14, $r0, 1400
+j 23
+addi $r15, $r0, -15
+addi $r16, $r0, 161
+jr $ra
+addi $r17, $r0, 23
+addi $r18, $r0, 18
+addi $r19, $r0, -8
+addi $r20, $r0, 20

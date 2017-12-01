@@ -169,7 +169,12 @@ public class Assembulator {
 
 		if (v.equals("$rstatus")) {v = "$r30";}
 		if (v.equals("$ra")) {v = "$r31";}
-		if (v.contains("$r")) { v = v.substring(2);}
+		if (v.contains("$")) {
+			v = v.substring(1);
+			if (v.contains("r")) {
+				v = v.substring(1);
+			}
+		}
 
 		printBinary(v, 5);
 
